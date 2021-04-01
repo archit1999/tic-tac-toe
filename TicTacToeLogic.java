@@ -1,4 +1,4 @@
-public class TicTacToeAI {
+public class TicTacToeLogic {
 
     /* the board */
     private int board[][];
