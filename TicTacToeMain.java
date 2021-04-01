@@ -7,7 +7,7 @@ public class TicTacToeMain extends JFrame implements ActionListener {
     private JButton [][]buttons = new JButton[3][3];
     private JButton playButton = new JButton("Play");
     private JLabel statusLabel = new JLabel("");
-    private TicTacToeAI game = null;
+    private TicTacToeLogic game = null;
     private int human = 0;
     private int computer = 0;
     private boolean isPlay = false;
@@ -58,8 +58,6 @@ public class TicTacToeMain extends JFrame implements ActionListener {
         add(southPanel,"South");
 
         setSize(300,300);
-
-        // I'm lazy to implement the correct way
         setLocationRelativeTo(null);
     }
 
@@ -120,9 +118,9 @@ public class TicTacToeMain extends JFrame implements ActionListener {
     }
 
     private void play() {
-        game = new TicTacToeAI();
-        human = TicTacToeAI.ONE;
-        computer = TicTacToeAI.TWO;
+        game = new TicTacToeLogic();
+        human = TicTacToeLogic.ONE;
+        computer = TicTacToeLogic.TWO;
         setStatus("Your Turn");
         setButtonsEnabled(true);
         isPlay = true;
